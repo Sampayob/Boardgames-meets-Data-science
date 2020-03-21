@@ -1,10 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Boardgames meets Data Science app
-
-# In[1]:
-
+## Boardgames meets Data Science app
 
 import streamlit as st
 
@@ -22,25 +19,17 @@ import random
 import ast
 import time
 
-
-# In[2]:
-
-
 ("""
 # Boardgames meets Data Science
 
-[Author](https://github.com/Sampayob), [App Code](https://raw.githubusercontent.com/Sampayob/BoardgamesML/master/boardgames-meets-ml.py)
+[Author](https://github.com/Sampayob), [App Code](https://raw.githubusercontent.com/Sampayob/Boardgames-meets-Data-science/master/Boardgames-meets-DataScience-app.py)
 
 This data science project comes up with the idea of exploring the **boardgame market** using **Machine Learning** and **Natural Language Processing** to find what makes this games **awesome**. 
 
 - The **data** was web scraped from [BoardGameGeek](https://boardgamegeek.com/browse/boardgame) site (also known as BGG) at March 2020.
 
-- You can find also here a [**deeper analysis**](https://github.com/Sampayob/BoardgamesML).
+- You can find also here a [**deeper analysis**](https://github.com/Sampayob/Boardgames-meets-DataScience).
 """)
-
-
-# In[20]:
-
 
 url = 'https://raw.githubusercontent.com/Sampayob/Boardgames-meets-Data-science/master/BGGTop5000.csv'
 
@@ -54,20 +43,13 @@ def dataset():
     return df
 df = dataset()
 
-
-# In[ ]:
-
-
 st.subheader('BGG Top 5000 Boardgames')
 
 if st.checkbox('Show dataset'):
     st.write(df)
 
 
-# ## Model
-
-# In[4]:
-
+## Model
 
 # Drop columns and repleace missings
 
@@ -206,20 +188,12 @@ for x,y in zip(feature_selection_df['Feature'].tolist(), feature_selection_df['T
         mechanisms_worst.append(x)
         
 
-
-# In[5]:
-
-
 df_X = df_X.drop(mechanisms_worst, axis=1)
 y = np.asarray(df_X['Rating'])
 df_X = df_X.drop(['Rating'], axis=1)
 X = np.asarray(df_X)
 
-
-# ## APP - Boardgame rating predictor
-
-# In[ ]:
-
+## APP - Boardgame rating predictor
 
 st.header('Machine Learning')
 
@@ -326,11 +300,7 @@ if st.checkbox('Boardgame rating predictor'):
         else:
             st.error('Your game has a low rating (5.5-6.9)')
 
-
-# ## APP - Boardgame generator
-
-# In[14]:
-
+## APP - Boardgame generator
 
 if st.checkbox('Boardgame generator'):
     
@@ -435,10 +405,8 @@ if st.checkbox('Boardgame generator'):
         st.table(pd.DataFrame(bgs, columns=['Age','Number of players','Best number of players','Playing time','Weight','Mechanisms']))
 
 
-# ## NLP
 
-# In[ ]:
-
+## NLP
 
 st.header('Natural Language Processing')
 
@@ -452,16 +420,13 @@ NLP is a subfield of *artificial intelligence** and is the process of analyzing,
 - For this part only the 400 top boardgames descriptions are considered.
 """)
 
-
-# In[ ]:
-
-
 if st.checkbox('Show options'):
     
 
     
     import nltk
     import spacy
+    import pandas as pd
 
     from nltk.corpus import stopwords
     from nltk.tokenize import sent_tokenize, word_tokenize
@@ -472,7 +437,7 @@ if st.checkbox('Show options'):
 
 
     field_names = {'Name','Rating','Year','Description'} 
-    url = 'https://raw.githubusercontent.com/Sampayob/Boardgames-meets-Data-science/master/BGGtop400-Description.csv'
+    url = 'https://raw.githubusercontent.com/Sampayob/Boardgames-meets-Data-science/master/BGGTop400-Description.csv'
     df = pd.read_csv(url, delimiter = ',',names=field_names, encoding='utf-8-sig')
     df.columns = ['Year','Name','Rating','Description']
 
@@ -645,4 +610,3 @@ if st.checkbox('Show options'):
         wf = st.text_input('Count how many times a word is present in all boardgame descriptions ', 'word')
         if st.button('Count '):
             st.write(str(wf)+' appears '+str(tokens2.count(wf))+' times')
-
