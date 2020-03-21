@@ -606,6 +606,6 @@ if st.checkbox('Show options'):
 
         ###  Count words
 
-        wf = st.text_input('Count how many times a word is present in all boardgame descriptions ', 'word')
+        wf = st.text_input('Count how many times a word is present ', 'word')
         if st.button('Count '):
             st.write(str(wf)+' appears '+str(tokens2.count(wf))+' times')
