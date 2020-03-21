@@ -539,8 +539,8 @@ if st.checkbox('Show options'):
     if st.checkbox("Let's analyse"):
     
         names = []
-            for d in df2['Name']:
-                names.append(d.replace(" ", "").replace(":", ""))
+        for d in df2['Name']:
+            names.append(d.replace(" ", "").replace(":", ""))
 
         desc1 = st.selectbox('Select one', names)
 
