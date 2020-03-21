@@ -537,18 +537,13 @@ if st.checkbox('Show options'):
     """)
     
     if st.checkbox("Let's analyse"):
-        
-        st.subheader("""
-        Most frequent words
-        """)
-
+    
         names = []
-        for d in df2['Name']:
-            names.append(d.replace(" ", "").replace(":", ""))
-
+            for d in df2['Name']:
+                names.append(d.replace(" ", "").replace(":", ""))
 
         desc1 = st.selectbox('Select one', names)
-        
+
         desc_one = descriptions[names.index(str(desc1))]
 
         text2 = ''.join(desc_one)
@@ -556,7 +551,7 @@ if st.checkbox('Show options'):
        # **Making tokens from text**
 
         words2=' '.join(x.lower() for x in text2.split())
-        words2 = word_tokenize(words2)
+        words2 = word_tokenize(words2)  
 
        # **Filter tokens through stop words and punctuation marks**
 
@@ -567,6 +562,10 @@ if st.checkbox('Show options'):
             if w not in stop_words:
                 if len(w) > 2:
                     tokens2.append(w)
+        
+        st.subheader("""
+        Most frequent words
+        """)
 
         if st.button('Search for frequent words'):
 
