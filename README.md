@@ -2,7 +2,7 @@
 
 This data science project comes up with the idea of exploring the **boardgame market** using **Machine Learning** and **Natural Language Processing** to find what makes this games **awesome**. 
 
-You can either **explore all the process in the [**jupyter file**](https://github.com/Sampayob/Boardgames-meets-Data-science/blob/master/Boardgames-meets-DataScience.ipynb) or try the [**web app**](https://boardgames-meets-ds.herokuapp.com/)
+You can either explore all the process in the [**jupyter file**](https://github.com/Sampayob/Boardgames-meets-Data-science/blob/master/Boardgames-meets-DataScience.ipynb) or try the [**web app**](https://boardgames-meets-ds.herokuapp.com/)
 
 The **data** was web scraped from [BoardGameGeek](https://boardgamegeek.com/browse/boardgame) site (also known as BGG) at March 2020.
 
