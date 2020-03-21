@@ -28,7 +28,7 @@ This data science project comes up with the idea of exploring the **boardgame ma
 
 - The **data** was web scraped from [BoardGameGeek](https://boardgamegeek.com/browse/boardgame) site (also known as BGG) at March 2020.
 
-- You can find also here a [**deeper analysis**](https://github.com/Sampayob/Boardgames-meets-DataScience).
+- You can find also here a [**deeper analysis**](https://github.com/Sampayob/Boardgames-meets-Data-science/blob/master/Boardgames-meets-DataScience.ipynb).
 """)
 
 url = 'https://raw.githubusercontent.com/Sampayob/Boardgames-meets-Data-science/master/BGGTop5000.csv'
@@ -411,7 +411,7 @@ if st.checkbox('Boardgame generator'):
 st.header('Natural Language Processing')
 
 st.info("""
-NLP is a subfield of *artificial intelligence** and is the process of analyzing, understanding and deriving **meaning from human languages for computers**.
+NLP is a subfield of **artificial intelligence** and is the process of analyzing, understanding and deriving **meaning from human languages for computers**.
 
 - It helps you **extract insights** from unstructured text. 
 
