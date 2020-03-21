@@ -438,8 +438,8 @@ if st.checkbox('Show options'):
 
     field_names = {'Name','Rating','Year','Description'} 
     url = 'https://raw.githubusercontent.com/Sampayob/Boardgames-meets-Data-science/master/BGGTop400-Description.csv'
-    df = pd.read_csv(url, delimiter = ',',names=field_names, encoding='utf-8-sig')
-    df.columns = ['Year','Name','Rating','Description']
+    df2 = pd.read_csv(url, delimiter = ',',names=field_names, encoding='utf-8-sig')
+    df2.columns = ['Year','Name','Rating','Description']
 
     ## Transforming boardgames description in tokens
 
