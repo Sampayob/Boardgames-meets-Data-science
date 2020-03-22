@@ -28,7 +28,7 @@ This data science project comes up with the idea of exploring the **boardgame ma
 
 - The **data** was web scraped from [BoardGameGeek](https://boardgamegeek.com/browse/boardgame) site (also known as BGG) at March 2020.
 
-- You can also find here a [**deeper analysis**](https://github.com/Sampayob/Boardgames-meets-Data-science/blob/master/Boardgames-meets-DataScience.ipynb).
+- You can also find here the [**complete process**](https://github.com/Sampayob/Boardgames-meets-Data-science/blob/master/Boardgames-meets-DataScience.ipynb).
 """)
 
 url = 'https://raw.githubusercontent.com/Sampayob/Boardgames-meets-Data-science/master/BGGTop5000.csv'
