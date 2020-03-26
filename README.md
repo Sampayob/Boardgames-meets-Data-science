@@ -18,6 +18,7 @@ The **data** was web scraped from [BoardGameGeek](https://boardgamegeek.com/brow
 * [Streamlit 0.56.0](https://www.streamlit.io/) 
 * [spaCy 2.2.3](https://spacy.io/) 
 * [Natural Language Toolkit 3.4.5](https://www.nltk.org/) 
+* [Selenium 3.141.59](https://www.selenium.dev/)
 
 ## Author
 
